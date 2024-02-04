@@ -4,4 +4,17 @@ import {
   updateFavoriteSchema,
 } from "./contactsSchemas.js";
 
-export { createContactSchema, updateContactSchema, updateFavoriteSchema };
+import {
+  loginSchema,
+  registerSchema,
+  updateSubscriptionSchema,
+} from "./usersSchemas.js";
+
+export {
+  createContactSchema,
+  updateContactSchema,
+  updateFavoriteSchema,
+  loginSchema,
+  registerSchema,
+  updateSubscriptionSchema,
+};

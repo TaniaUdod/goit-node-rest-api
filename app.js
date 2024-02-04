@@ -6,6 +6,7 @@ import path from "path";
 import dotenv from "dotenv";
 dotenv.config({ path: path.join("config", ".env") });
 
+import usersRouter from "./routes/usersRouter.js";
 import contactsRouter from "./routes/contactsRouter.js";
 import { connectDB } from "./config/connectDB.js";
 
@@ -15,6 +16,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 
+app.use("/api/users", usersRouter);
 app.use("/api/contacts", contactsRouter);
 
 app.use((_, res) => {

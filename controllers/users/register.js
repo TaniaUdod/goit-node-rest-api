@@ -1,4 +1,6 @@
 import bcrypt from "bcrypt";
+import gravatar from "gravatar";
+
 import { HttpError, ctrlWrapper } from "../../helpers/index.js";
 import { User } from "../../models/index.js";
 
@@ -11,8 +13,13 @@ export const register = ctrlWrapper(async (req, res, next) => {
   }
 
   const hashPassword = await bcrypt.hash(password, 10);
+  const avatarURL = gravatar.url(email);
 
-  const newUser = await User.create({ ...req.body, password: hashPassword });
+  const newUser = await User.create({
+    ...req.body,
+    password: hashPassword,
+    avatarURL,
+  });
 
   res.status(201).json({
     user: {

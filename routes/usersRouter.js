@@ -1,5 +1,5 @@
 import express from "express";
-import { authenticate, validateBody } from "../helpers/index.js";
+import { authenticate, upload, validateBody } from "../helpers/index.js";
 import {
   loginSchema,
   registerSchema,
@@ -10,6 +10,7 @@ import {
   login,
   logout,
   register,
+  updateAvatar,
   updateSubscription,
 } from "../controllers/users/index.js";
 
@@ -28,6 +29,13 @@ usersRouter.patch(
   authenticate,
   validateBody(updateSubscriptionSchema),
   updateSubscription
+);
+
+usersRouter.patch(
+  "/avatars",
+  authenticate,
+  upload.single("avatar"),
+  updateAvatar
 );
 
 export default usersRouter;

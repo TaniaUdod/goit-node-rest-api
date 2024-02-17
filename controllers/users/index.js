@@ -4,6 +4,8 @@ import { logout } from "./logout.js";
 import { register } from "./register.js";
 import { updateAvatar } from "./updateAvatar.js";
 import { updateSubscription } from "./updateSubscription.js";
+import { verifyEmail } from "./verifyEmail.js";
+import { resendVerifyEmail } from "./resendVerifyEmail.js";
 
 export {
   getCurrent,
@@ -12,4 +14,6 @@ export {
   register,
   updateAvatar,
   updateSubscription,
+  verifyEmail,
+  resendVerifyEmail,
 };

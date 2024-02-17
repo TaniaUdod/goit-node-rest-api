@@ -8,6 +8,7 @@ import {
   loginSchema,
   registerSchema,
   updateSubscriptionSchema,
+  verifySchema,
 } from "./usersSchemas.js";
 
 export {
@@ -17,4 +18,5 @@ export {
   loginSchema,
   registerSchema,
   updateSubscriptionSchema,
+  verifySchema,
 };

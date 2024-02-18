@@ -10,7 +10,7 @@ import usersRouter from "./routes/usersRouter.js";
 import contactsRouter from "./routes/contactsRouter.js";
 import { connectDB } from "./config/connectDB.js";
 
-const app = express();
+export const app = express();
 
 app.use(morgan("tiny"));
 app.use(cors());

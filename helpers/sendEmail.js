@@ -24,15 +24,3 @@ const sendEmail = (data) => {
 };
 
 export default sendEmail;
-
-// const email = {
-//   to: "vakidaj373@tospage.com",
-//   from: "tetiana_udod@meta.ua",
-//   subject: "Test email",
-//   html: "<p><strong>Test email</strong> from localhost:3000</p>",
-// };
-
-// transport
-//   .sendMail(email)
-//   .then(() => console.log("Email send success"))
-//   .catch((error) => console.log(error.message));
